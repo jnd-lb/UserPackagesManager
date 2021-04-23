@@ -17,12 +17,13 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('mobile_number')->unique();
-            $table->string("opt");
+            $table->string("otp");
             
             $table->unsignedBigInteger('plan_id');
             $table->foreign('plan_id')->references('id')->on('plans');
             
             $table->string('password')->nullale();
+            $table->boolean("verified")->default(0);
             
             $table->rememberToken();
             $table->timestamps();

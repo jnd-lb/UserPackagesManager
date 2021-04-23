@@ -22,6 +22,10 @@ class CreateBundlesTable extends Migration
             $table->unsignedBigInteger('plan_id');
             $table->foreign('plan_id')->references('id')->on('plans');
 
+
+            $table->unsignedBigInteger('package_id');
+            $table->foreign('package_id')->references('id')->on('packages');
+
             $table->string("price");
             $table->boolean("pending");
             $table->unsignedBigInteger("status");
