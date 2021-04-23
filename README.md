@@ -18,5 +18,6 @@ please follow the steps for properly
 
 1- composer install 
 2- php artisan jwt:secret
-3- composer migrate 
-4- composer seed
+3- php artisan migrate 
+4- php artisan db:seed
+
